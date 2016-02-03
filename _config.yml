@@ -41,13 +41,13 @@ titlecase: true
 
 # Site owner
 owner:
-  name: Your Name
+  name: Hyo Kyun
   avatar: bio-photo.jpg
-  bio: "Describe your self."
-  email:
+  bio: "Koreatech Computer Science Engineering undergraduate 4 grade."
+  email:dlagyrbs@koreatech.ac.kr
   disqus-shortname:
   twitter: #username
-  facebook: #username
+  facebook: yimo.yimo0
   google:
     plus: #username
     analytics:
@@ -55,7 +55,7 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: yimok
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
   xing: #username
