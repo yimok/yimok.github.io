@@ -1,17 +1,15 @@
 ---
 layout: post
-title: Github 블로그 repository를 clone해서 글쓰기
-description: 블로그 repository가 설치되어 있지 않은 PC에서 블로그를 작성하는 방법
-modified: 2015-07-05
+title: Operating System의 발달 과정
+description: Operating System의 발달 과정을 알아봅시다.
+modified: 2016-02-12
 tags: [blog]
 comments: true
 image:
-  feature: abstract-4.png
-  credit: dargadgetz
+  feature: sample-image-4.jpg
 ---
 
-블로그 repository가 설치되어 있지 않은 PC에서 블로그를 작성하는 방법을 알아보자. 
-여러가지 방법이 있겠지만, 이번에는 github의 remote repository를 clone해서 글을 작성하고 commit하는 방법을 살펴보기로 한다. 
+Operating System이 시기에 따라 어떻게 변화되었고 발전하였는지 알아 보자
 
 <section id="table-of-contents" class="toc">
   <header>
