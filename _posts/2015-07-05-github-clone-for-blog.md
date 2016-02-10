@@ -30,7 +30,7 @@ image:
 ## clone하기
 
 1. SourceTree를 실행
-2. 메뉴에서 **복제/생성** 아이콘을 선택
+2. 메뉴에서 **복제/생성** 아이콘을 선택->
 3. 저장소 복제 탭에서 소스 경로/URL에 github의 블로그 repository 주소 `https://github.com/자기아이디/자기아이디.github.io.git`를 입력 
 4. 소스 경로/URL 입력의 오른쪽 지구본 아이콘을 선택하여 호스팅 서비스, 사용자 명, 비밀번호를 입력하고 선호 프로토콜은 https로 선택 
 5. github의 remote repository 목록 중 블로그를 위한 사용자명.github.io를 선택
