@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title:            Site Title
+title:            yimoyimo.com
 locale:           en_US
 url:
 
@@ -9,7 +9,7 @@ url:
 
 permalink:   /:categories/:title/
 markdown:    kramdown
-highlighter: rouge
+highlighter: pygments
 sass:
   sass_dir: _sass
   style: compressed
