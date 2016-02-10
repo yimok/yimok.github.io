@@ -5,11 +5,11 @@ tags: "My personal history"
 modified: 2016-02-04
 comments: true
 image:
-  feature: sample-image-2.jpg
+  feature: sample-image-2m.jpg
 
 ---
 
-###두뇌의 용량은 의지의 용량
+### 두뇌의 용량은 의지의 용량 ###
 
 
 # Introduce 
