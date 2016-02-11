@@ -1,6 +1,6 @@
 ---
 layout: home
-title: SOLID CODE
+title: PASSION
 excerpt: ""
 image:
   feature: sample-image-1.jpg
