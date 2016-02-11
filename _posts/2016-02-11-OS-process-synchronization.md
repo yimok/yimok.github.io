@@ -124,7 +124,7 @@ if(BufferFlag)
 - 하지만 프로세스가 공유하는 자원은 버퍼 말고도 BufferFlag 라는 변수도 공유 하기 때문에  아래와 같은 문제가 발생한다.
 
 <figure>
-	<img src="/images/post2-1.PNG" alt="">
+	<img src="/images/post2-1.png" alt="">
 </figure>
 
 - proc 1 이 아직 FALSE로 바뀌기 전에 proc 2가 진입을 해버려서 두 프로세스가 버퍼를 사용하는 문제가 발생한다.
@@ -162,7 +162,7 @@ Process Synchronization 이란 interaction 하는 프로세스들이 한 자원�
 
 - 1970년대 다익스트라가 고안해낸 Mutual exclusion 알고리즘이다.
 <figure>
-	<img src="/images/post2-2.PNG" alt="">
+	<img src="/images/post2-2.png" alt="">
 </figure>
 
 - 위 그림에서 세마포어는 열쇠, 그리고 열쇠를 관리하는 자는 OS, 벤치는 Waiting 큐, 작업공간은 Run 큐이다.
@@ -218,7 +218,7 @@ Taske2()
 #### 스케줄링 관점의 세마포어
 
 <figure>
-	<img src="/images/post2-3.PNG" alt="">
+	<img src="/images/post2-3.png" alt="">
 </figure>
 
 - 인터럽트 서비스 루틴은 깨어나야 하므로 signal(s) = V(s)
@@ -228,7 +228,7 @@ Taske2()
 #### Producer/Consumer
 
 <figure>
-	<img src="/images/post2-4.PNG" alt="">
+	<img src="/images/post2-4.png" alt="">
 </figure>
 
 - Producer 프로세스는 데이터를 생성만하는 것이고 Consumer 프로세스는 데이터를 읽어간다.
@@ -237,7 +237,7 @@ Taske2()
 - 이를 세마포어를 이용하여 구현하면 간편하게 구현할 수 있다.
 
 <figure>
-	<img src="/images/post2-5.PNG" alt="">
+	<img src="/images/post2-5.png" alt="">
 </figure>
 
 - 초기에 데이터는 없기때문에 0 이고 버퍼는 비어있기때문에 1로 초기화 한다.
