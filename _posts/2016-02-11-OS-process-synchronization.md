@@ -135,3 +135,114 @@ if(BufferFlag)
 ### 정리
 
 Process Synchronization 이란 interaction 하는 프로세스들이 한 자원을 공유하는 것 이라고 하며 OS 가 아무런 조작을 하지 않으면 문제가 발생하는 것을 Synchronization 문제라고 한다. 
+
+## Synchronization 문제 해결방법
+
+- 자원을 공유하는 코드 구간을 Atomic 하게 만들어야한다. -> ex) 인터럽트를 disable 한다.
+- 인터럽트를 disable 함으로써 Atomic 하게 만들었다. 하지만 이건 프로세스와 인터럽트와 의 문제이고 프로세스와 프로세스 사이의 문제는 어떻게 해결해야할지 생각해보자.
+-  과거에 배운 내용 중 Context Switching을 생각해 보자 이 Context Switching 이 발생되려면 인터럽트가 발생되어야한다. 즉 인터럽트를 disable 하면 Context Switching 이 발생되지 않는다.
+- 프로세스들이 서로 경합 할 때도 인터럽트를 disable 하면 Context Switching 이 발생되지 않는다. (싱글 프로세서에서만)
+- Critical Section 안에서는 하나의 프로세스만 실행할 수 있게 된다. 
+- 그리고 Critical Section 안에서는 Mutual exclusion 이라는 현상이 나타나야 한다.  
+- Critical Section한 프로세스가 들어가게 되면 다른 프로세스를 다 배제 시키는 능력이 필요하다 이를 Mutual exclusion 이라 하고 OS 는 이 Mutual exclusion 매커니즘을 제공해야한다.
+
+>Atomic operation : 일련의 모든 연산이 끝날 때까지 다른 프로세스는 그 연산에 대한 어떠한 변화도 할 수 없다.
+
+>Critical Section : 어떤 한 코드 한 조각을 atomic 하게 즉 Non-Interruptable 하게 만들었을 때 코드 섹션을 Critical Section이라 한다.  
+
+## Mutual exclusion 매커니즘
+
+### 요구사항
+
+- 주어진 시간에 하나의 프로세스만 크리티컬 섹션에 허용이 되어야 한다.
+- Mutual exclusion을 필요로 하는 크리티컬 섹션에 여러 개의 프로세스가 진입을 원하면 그 중에 하나만 진입 할 수 있도록 허용 해야 한다.
+- 크리티컬 섹션 안에 들어간 프로세스는 최대한 빨리 나와야 한다.
+
+### 세마포어	
+
+- 1970년대 다익스트라가 고안해낸 Mutual exclusion 알고리즘이다.
+<figure>
+	<img src="/images/post2-2.PNG" alt="">
+</figure>
+
+- 위 그림에서 세마포어는 열쇠, 그리고 열쇠를 관리하는 자는 OS, 벤치는 Waiting 큐, 작업공간은 Run 큐이다.
+- 위와 같은 메커니즘이 세마포어 메커니즘이라 한다.
+- 세마포어는 Synchronization을 제공해주는 정수형 변수로 있다[1] , 없다[0] 으로 표현한다.
+
+
+#### 세마포어 API
+
+
+1. 열쇠 줘 : lock(Semaphore)       , wait(Semaphore)      , P(Semaphore)
+2. 열쇠 받아 : unlock(Semaphore)   , signal(Semaphore)     , V(Semaphore)
+
+
+>lock , unlock 은 Synchronization 관점 에서의 API
+>
+>wait , signal 은 process state transition을 야기하는 API ( 스케줄링 관점 )
+
+
+
+```
+// 위 그림을 코드로 구현
+
+semaphore S1 = 1 ;
+
+Task1()
+{
+	P(S1)
+
+		use pr;
+
+	V(S1)
+
+}
+
+Taske2()
+{
+	P(S1)
+
+		use pr;
+
+	V(S1)
+
+}
+
+
+```
+
+- 세마포어는 무슨 값으로 초기화 시켜야 할까? ->  1로 초기화 (바이너리 세마포어)
+- 만약 작업공간이 하나 더 증가 한다면 세마포어 변수(카운팅 세마포어)는 2,1,0를 가진다.
+- 카운팅 세마포어는 초기값을 2로 초기화 시킨다.
+
+#### 스케줄링 관점의 세마포어
+
+<figure>
+	<img src="/images/post2-3.PNG" alt="">
+</figure>
+
+- 인터럽트 서비스 루틴은 깨어나야 하므로 signal(s) = V(s)
+- Task 는 자고 있어야하므로 wait(s) = P(s)
+- 초기값은 0으로 주어야 Task가 먼저 수행한다고 할지라도 대기 상태로 들어간다.
+
+#### Producer/Consumer
+
+<figure>
+	<img src="/images/post2-4.PNG" alt="">
+</figure>
+
+- Producer 프로세스는 데이터를 생성만하는 것이고 Consumer 프로세스는 데이터를 읽어간다.
+- 생성된 데이터를 Consumer 에게 전달하기위에 중간에 Buffer를 사용한다.
+- Producer가 너무빨리 생성하면 Buffer 가 가득차기 때문에 이 Buffer가 빌때까지 Producer는 대기한다. 꺼꾸로 Consumer가 너무 빨리 읽으면 Buffer가 비기 때문에 Consumer가 대기한다.
+- 이를 세마포어를 이용하여 구현하면 간편하게 구현할 수 있다.
+
+<figure>
+	<img src="/images/post2-5.PNG" alt="">
+</figure>
+
+- 초기에 데이터는 없기때문에 0 이고 버퍼는 비어있기때문에 1로 초기화 한다.
+- Producer/Consumer는 스케줄링과 Mutual exclusion이 절묘하게 결합되어 있다. 이런 기능을 세마포어로 심플하게 구현 가능하다.
+
+#### 정리
+
+- 세마포어는 Mutual exclusion 도 제공해주고 스케줄링도 제공해 준다.
