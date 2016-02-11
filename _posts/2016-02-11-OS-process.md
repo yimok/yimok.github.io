@@ -1,7 +1,7 @@
 ---
 layout: post
-title: [OS]Operating System의 발달 과정과 기능
-description: [OS]Operating System의 발달 과정과 기능 
+title: "[OS]Operating System의 발달 과정과 기능"
+description: "[OS]Operating System의 발달 과정과 기능" 
 modified: 2016-02-12
 tags: [blog]
 comments: true
@@ -98,7 +98,7 @@ Operating System이 시기에 따라 어떻게 변화되었고 발전하였는�
 ## OS의 기능
 
 <figure>
-	<img src="/images/post1-1.PNG" alt="">
+	<img src="/images/post1-2.PNG" alt="">
 </figure>
 
 ### Coordinator(조정자) 입장에서 본 OS의 기능
