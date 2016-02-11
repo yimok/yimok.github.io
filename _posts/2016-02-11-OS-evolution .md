@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[OS]Operating System의 발달 과정과 기능"
-description: "[OS]Operating System의 발달 과정과 기능" 
+title: "[OS]Operating System의 발전 과정과 기능"
+description: "[OS]Operating System의 발전 과정과 기능" 
 modified: 2016-02-12
 tags: [blog]
 comments: true
