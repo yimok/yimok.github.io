@@ -170,7 +170,7 @@ Process Synchronization 이란 interaction 하는 프로세스들이 한 자원�
 - 세마포어는 Synchronization을 제공해주는 정수형 변수로 있다[1] , 없다[0] 으로 표현한다.
 
 
-#### 세마포어 API
+### 세마포어 API
 
 
 1. 열쇠 줘 : lock(Semaphore)       , wait(Semaphore)      , P(Semaphore)
@@ -215,7 +215,7 @@ Taske2()
 - 만약 작업공간이 하나 더 증가 한다면 세마포어 변수(카운팅 세마포어)는 2,1,0를 가진다.
 - 카운팅 세마포어는 초기값을 2로 초기화 시킨다.
 
-#### 스케줄링 관점의 세마포어
+### 스케줄링 관점의 세마포어
 
 <figure>
 	<img src="/images/post2-3.png" alt="">
@@ -225,7 +225,7 @@ Taske2()
 - Task 는 자고 있어야하므로 wait(s) = P(s)
 - 초기값은 0으로 주어야 Task가 먼저 수행한다고 할지라도 대기 상태로 들어간다.
 
-#### Producer/Consumer
+### Producer/Consumer
 
 <figure>
 	<img src="/images/post2-4.png" alt="">
@@ -243,6 +243,6 @@ Taske2()
 - 초기에 데이터는 없기때문에 0 이고 버퍼는 비어있기때문에 1로 초기화 한다.
 - Producer/Consumer는 스케줄링과 Mutual exclusion이 절묘하게 결합되어 있다. 이런 기능을 세마포어로 심플하게 구현 가능하다.
 
-#### 정리
+### 정리
 
 - 세마포어는 Mutual exclusion 도 제공해주고 스케줄링도 제공해 준다.
