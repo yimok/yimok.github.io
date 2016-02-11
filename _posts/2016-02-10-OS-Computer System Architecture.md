@@ -8,7 +8,7 @@ comments: true
 image:
   feature: back1.jpg
 ---
-
+Computer System Architecture에 대해 알아보자
 
 <section id="table-of-contents" class="toc">
   <header>
@@ -57,9 +57,10 @@ image:
 - I/O 컨트롤러 안에 여러 개의 레지스터들이 존재하기 때문에 이 I/O 레지스터들에 대한 주소가 필요하다. 이런 어드레스를 I/O 어드레스라 한다.
 
 
->Interrupt-Driven I/O : CPU가 I/O 동작에 직접적으로 관여하지 않기 때문에 I/O동작이 완료되면 I/O 컨트롤러가 CPU 에게 비동기적으로 완료되었음을 알려주는 방식
+>- Interrupt-Driven I/O : CPU가 I/O 동작에 직접적으로 관여하지 않기 때문에 I/O동작이 완료되면 I/O 컨트롤러가 CPU 에게 비동기적으로 완료되었음을 알려주는 방식
 >
->Polling I/O : Interrupt-Driven I/O 와는 반대로 CPU가 출력될 데이터를 I/O 컨트롤러에 있는 Output 레지스터에 보내어 I/O 동작이 완료될 때 까지 CPU가 반복해서 I/O 컨트롤러의 레지스터 상태를 확인하는 방식(인터럽트 관여 안함)
+>
+>- Polling I/O : Interrupt-Driven I/O 와는 반대로 CPU가 출력될 데이터를 I/O 컨트롤러에 있는 Output 레지스터에 보내어 I/O 동작이 완료될 때 까지 CPU가 반복해서 I/O 컨트롤러의 레지스터 상태를 확인하는 방식(인터럽트 관여 안함)
 
 ### Port-maped I/O
 
@@ -166,20 +167,15 @@ ex)MMU의 레지스터들 (베이스 레지스터, 바운드 레지스터)은 OS
 - 여러 가지 상황 정보를 flag 형태로 기억하는데 그중 한 비트가 있고 그중 하나를 모드 비트라 한다. 모드비트가 0이면 OS을 수행하는 모드고 , 1로 되어있으면 User program을 수행하는 모드다.  
 - 0이 된 모드를 Kernel Mode 또는 Privileged Mode , Monitor Mode 라고 한다.
 
-> Kernel Mode (Privileged Mode or Monitor Mode) : 
-> 커널이 Privileged Instruction 들을 수행 시킬 수 있는 모드
-> 
->
-> User Mode :
-> Privileged Instruction 들을 수행 시킬 수 없는 모드
-> 
-> 
-> ex)인스트럭션이 Privileged Instruction 인데 모드가 1로 되어있으면 누군가가 Protection을 침범 하려한다. -> 소프트웨어 인터럽트를 발생(Trap)
-> 
-> 
-> 컴퓨터시스템은 기본적으로 유저 프로그램(버그가 많으므로)을 통제된 환경에서만 수행 시킨다.
-> 
-> 
+### Kernel Mode (Privileged Mode or Monitor Mode)
+- 커널이 Privileged Instruction 들을 수행 시킬 수 있는 모드
+
+
+### User Mode 
+- Privileged Instruction 들을 수행 시킬 수 없는 모드
+- ex)인스트럭션이 Privileged Instruction 인데 모드가 1로 되어있으면 누군가가 Protection을 침범 하려한다. -> 소프트웨어 인터럽트를 발생(Trap)
+- 컴퓨터시스템은 기본적으로 유저 프로그램(버그가 많으므로)을 통제된 환경에서만 수행 시킨다.
+
 
 ### Operating System이 Kernel Mode에서 수행될 때 부여받는 주요권한
 
@@ -198,10 +194,7 @@ ex)MMU의 레지스터들 (베이스 레지스터, 바운드 레지스터)은 OS
 - 인터럽트가 필요하면 하드웨어적으로 모드를 0으로 변경해준다. -> 모드 체인지는 하드웨어적인 매커니즘으로 일어나고 이것이 인터럽트이다. -> 즉 인터럽트가 발생하면 무조건 커널 모드로 들어가고 커널모드로 바뀌는 순간 그 모드 체인지를 관할 할 수 있는 인터럽트 서비스 루틴이 시스템을 장악한다.
 - 위의 방법들로 I/O , Memory, CPU를 Protection 한다. 즉 쉽게 말해서 Memory를 Protection 한다는 것은 MMU 레지스터들을 통제한다는 것이다. 메모리가 다른 작업에 의해 Call 되지 않게 하는 것이다.
 - 왜 I/O나 Memory , CPU를 Protection 해야 하는가? -> 이러한 메모리나 I/O 들을 자원이라고 말하는데 컴퓨터시스템에서 자원을 독점한다면 큰문제가 된다.
-
->어떻게 하면 I/O를 Protection 할 수 있을까? → I/O 레지스터들 (포트 레지스터들을) privileged instruction 으로 만들어 보호한다. → I/O 에 관련된 모든 함수들은 커널로 들어가야 한다.
-> 
->
->CPU Protection? CPU도 I/O나 Memory처럼 자원이다. 어떤 프로그램이 수행되려면 CPU가 반드시 필요한데 어떤 한 작업이 CPU를 monopolize(독점)하는 현상이 발생될 수 있다. 이러한 문제를 해결하기 위해 그 작업에게 일정 시간만을 허용하도록 세팅한다.(Timer Interrupt)
+- 어떻게 하면 I/O를 Protection 할 수 있을까? → I/O 레지스터들 (포트 레지스터들을) privileged instruction 으로 만들어 보호한다. → I/O 에 관련된 모든 함수들은 커널로 들어가야 한다.
+- CPU Protection? CPU도 I/O나 Memory처럼 자원이다. 어떤 프로그램이 수행되려면 CPU가 반드시 필요한데 어떤 한 작업이 CPU를 monopolize(독점)하는 현상이 발생될 수 있다. 이러한 문제를 해결하기 위해 그 작업에게 일정 시간만을 허용하도록 세팅한다.(Timer Interrupt)
 	
 
