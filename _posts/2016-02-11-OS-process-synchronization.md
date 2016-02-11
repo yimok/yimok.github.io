@@ -40,7 +40,7 @@ Process의 동기화가 무엇인지를 알아보고 Process Synchronization 에
 2. Concurrency(병렬성)를 높이기 위해서이다. -> 웹 브라우를 싱글 Thread로 만들면 그 Thread가 시간이 오래 걸릴 경우 다른 일들을 처리하지 못한다. 하지만 Thread를 여러 개 두면, 다시 말해서 Concurrency를 높이면 다른 Thread들이 또 다른 일을 처리해 줄 수 있다.
 3. 자원 공유를 통해 오버헤드를 줄일 수 있다. 
 
-### interaction의 문제점
+### interaction의 문제점 1
 
 ```
 static int iValue[2];
@@ -99,8 +99,39 @@ void main(void)
 
 ```
 
-- 인터럽트를 disable 시키면 유저프로세스가 수행될 때 인터럽트에 의해 쪼개지지 않아 Reentrant Cod가 되어 올바르게 작동한다.
+인터럽트를 disable 시키면 유저프로세스가 수행될 때 인터럽트에 의해 쪼개지지 않아 Reentrant Code가 되어 올바르게 작동한다.
 
 >Reentrant Code(재진입 가능 코드):
 >여러 Process 들에 의해 동시에 호출되거나, 이전 호출이 완료되기 전에 반복 호출되어도 올바르게 수행되 코드
 
+### interaction의 문제점 2
+
+```
+// Buffer
+
+if(BufferFlag)
+{
+	BufferFlag = FALSE;
+	UseBuffer();
+	BufferFlag = TURE;
+}
+
+
+```
+
+- BuffeFlag을 FALSE로 만들고 버퍼를 사용하고 TRUE로 만든다.
+- 여러 프로세스들이 버퍼를 두고 if 문을 두어 사용한다.
+- 하지만 프로세스가 공유하는 자원은 버퍼 말고도 BufferFlag 라는 변수도 공유 하기 때문에  아래와 같은 문제가 발생한다.
+
+<figure>
+	<img src="/images/post2-1.PNG" alt="">
+</figure>
+
+- proc 1 이 아직 FALSE로 바뀌기 전에 proc 2가 진입을 해버려서 두 프로세스가 버퍼를 사용하는 문제가 발생한다.
+- 위와 같은 코드를 Race Condition 이라고 볼 수 있다.
+
+>Race Condition(경합 조건) : 여러 프로세스들이 동기화 절차를 거치지 않고 동시에 자원을 사용하기 위해 경쟁함으로써 그 수행 결과를 예측할 수 없게 되는 상황
+
+### 정리
+
+Process Synchronization 이란 interaction 하는 프로세스들이 한 자원을 공유하는 것 이라고 하며 OS 가 아무런 조작을 하지 않으면 문제가 발생하는 것을 Synchronization 문제라고 한다. 
