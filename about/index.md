@@ -5,7 +5,7 @@ tags: "My personal history"
 modified: 2016-02-04
 comments: true
 image:
-  feature: sample-image-2.jpg
+  feature: back2.jpg
 
 ---
 

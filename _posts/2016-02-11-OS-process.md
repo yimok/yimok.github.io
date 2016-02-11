@@ -6,7 +6,7 @@ modified: 2016-02-12
 tags: [blog]
 comments: true
 image:
-  feature: sample-image-4.jpg
+  feature: back3.PNG
 ---
 
 Operating System이 시기에 따라 어떻게 변화되었고 발전하였는지 알아 보고 Opertating System 이 어떠한 역할을 하는지 알아 보자.
