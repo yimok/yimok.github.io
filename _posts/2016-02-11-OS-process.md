@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Operating System의 발달 과정
-description: Operating System의 발달 과정 
+title: [OS]Operating System의 발달 과정과 기능
+description: [OS]Operating System의 발달 과정과 기능 
 modified: 2016-02-12
 tags: [blog]
 comments: true
@@ -9,7 +9,7 @@ image:
   feature: sample-image-4.jpg
 ---
 
-Operating System이 시기에 따라 어떻게 변화되었고 발전하였는지 알아 보자 
+Operating System이 시기에 따라 어떻게 변화되었고 발전하였는지 알아 보고 Opertating System 이 어떠한 역할을 하는지 알아 보자.
 
 <section id="table-of-contents" class="toc">
   <header>
@@ -67,7 +67,7 @@ Operating System이 시기에 따라 어떻게 변화되었고 발전하였는�
 	<img src="/images/post1-1.PNG" alt="">
 </figure>
 
-- CPU에 의해 바로 생성된 주소를 논리적인 주소라 한다. 이 논리적 주소는 MMU를 통해 여러 변환 과정을 겪는는다.
+- CPU에 의해 바로 생성된 주소를 논리적인 주소라 한다. 이 논리적 주소는 MMU를 통해 여러 변환 과정을 겪는다.
 - 생성된 논리적 주소는 MMU안에서 Base Register의 값과 더해지고 이 값이 Base Register + Bound Register 의 값과 비교해 작은지	 체크를 한다. -> 만약 이 값을 넘어설 경우 다른 메모리 영역을 건드린다는 뜻이기 때문이다.
 - 이러한 과정을 최종적으로 거친 주소를 물리적 주소라 한다.
 
@@ -81,8 +81,43 @@ Operating System이 시기에 따라 어떻게 변화되었고 발전하였는�
 
 - 인터넷이 선택이아니라 필수가 되었고 모든 컴퓨터가 네트워킹으로 연결 되어 있다. 요즘 PC는 TCP/IP가 탑재되어 나옴
 - PC os와 Server os의 경계가 사라졌다. (하드웨어의 가격이 매우 싸져 pc의 프로세서 성능이 상승되었기 때문에) -> os가 복잡해짐
-- 멀티미디어 서포트가 상승되었다. ( 과거에는 텍스트만 처리하면 되었다 다운로드 한번으로 처리됨 ) -> 오디오, 동영상과 같은 미디어들을 처리해야할 필요성이 생겼다. (Continuos Media: 계속적으로 처리해야함)
+- 멀티미디어 서포트가 상승되었다. (과거에는 텍스트만 처리하면 되었다 다운로드 한번으로 처리됨) -> 오디오, 동영상과 같은 미디어들을 처리해야할 필요성이 생겼다. (Continuos Media: 계속적으로 처리해야함)
 - 이러한 멀티미디어 발전으로 운영체제의 스케줄링 방식의 변화가 생겼다. 중요한 일을 먼저 처리하는 우선순위 기반 스케줄링에서 -> Continuos Media를 원활하게 처리하기 위한 Bandwidth 스케줄링으로 변화
 
 ### Downloading 과 Streaming 의 차이 
 - Downloading 은 전체데이터를 확보한 다음에 작업을 시작 할 수 있고 Streaming은 일부의 데이터만 확보한 상태에서 작업을 시작할 수 있음
+
+
+## 발전단계 정리
+
+- OS는 하드웨어의 Utilization을 높이기 위해 등장하였다. 초창기 휴먼 오퍼레이터를 대체 하기 위해 Batch Monitor 가 등장하였고 여기서 좀더 CPU의 활용을 높이기 위해 I/O와 CPU를 오버랩 시키기 위한 OS가 나왔다. 하지만 동기화 문제가 해결되지 않아서 멀티 프로그래밍이 나왔고 멀티 프로그래밍으로 인한 Memory Protection, Memory Relocation 단점을 보완하기 위한 기술이 발전되 었다.
+- 무어의 법칙에 따라 하드웨어의 기술이 발전하여 가격이 싸졌으나 반면에 인건비는 상승되었다 이에 따라 "어떻게 하면 사람들의 생산성을 향상 시킬 수 있을까?" 하는 것이 목표가 되었다. -> 터미널이 개발 되 각 사용자에게 터미널을 제공해주고 터미널들은 하나의 서버(CPU)에 연결 되어서 하나의 서버에 여러명의 사용자가 접근하여 이용가능하도록 만들었다. 
+- 하지만 다수의 사용자가 접근했기 때문에 문제점이 발생되었고 이러한 문제점을 해결하기 위해 CPU의 시간을 여러 사람에게 쪼개어 제공하는 (Time Sharing) 시스템이 개발 되었다. 
+- Time Sharing 시스템으로 사용자는 컴퓨터와 서로 대화하는 것처럼 느끼게 되었고 컴퓨터가 자신의 것이라고 생각하게 되어 중요한 개인파일들을 올리게 되었다. 이러한 문제를 해결하기 위해 안전한 파일 시스템이 개발되었다.
+
+## OS의 기능
+
+<figure>
+	<img src="/images/post1-1.PNG" alt="">
+</figure>
+
+### Coordinator(조정자) 입장에서 본 OS의 기능
+
+OS가 중재자로서 여러 Task 들이 자원들을 효율적으로 사용할 수 있도록 도와줌
+>- 컴퓨터 입장에서 볼 떄 Network System 은 I/O System의 하나로 볼 수 있다. 또 File System 역시 하드디스크에 저장되어있어 I/O System 기능의 하나로 볼 수 있다. 하지만 왜 따로 분류를 해놨을까?
+>- 만약 하나로 되어있다면..  나는 지금 네트워크를 처리해야하는데 하드디스크 입출력 때문에 막혀 진행하지 못하는 상황이 발생 될 수 있다. 
+
+### UNIX OS 에서의 I/O 분류
+
+대표적인 OS UNIX System 에서는 각 I/O를 속도차이, 데이터 차이에 따라 별도로 분류 해놓았다.
+
+- Character I/O device : I/O 단위가 Byte인 장치(예: 키보드, 마우스 -> I/O 시스템)
+- Block I/O device : I/O 단위가 Block인 장치(예: 하드디스크 -> 파일시스템)
+- Network I/O device : 네트워크를 제어하는 장치(예: 소켓 -> 네트워크시스템)
+
+### illusion Generator 입장에서 본 OS의 기능
+
+- 사용자들이 하드웨어의 모든 구조를 알 필요 없이 OS가 그러한 기능 들을 서포트 해준다.
+- Time sharing, 가상메모리 기술들을 제공
+- 단점: Time-sharing 시스템에서의 Thrashing 발생 -> 사용자의 수가 어떤 임계점을 넘어서는 순간 응답시간이 급격히 증가하는 현상이 발생
+ 
