@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[OS]Process Synchronization"
-description: "[OS]프로세스 동기화" 
+title: "[OS]Process Synchronization(1)"
+description: "[OS]프로세스 동기화(1)" 
 modified: 2016-02-13
 tags: [blog]
 comments: true
