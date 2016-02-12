@@ -74,4 +74,4 @@ LeaveCriticalSection(&cr);
 - ADD, ADC, AND, BTC, BTR, BTS, CMPXCHG, CMPXCH8B, DEC, INC, NEG, NOT, OR, SBB, SUB, XOR,
 
 
-[참고](http://choiwonwoo.egloos.com/1176220)
+>[참고 사이트](http://choiwonwoo.egloos.com/1176220)
