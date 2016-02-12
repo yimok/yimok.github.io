@@ -46,7 +46,7 @@ LeaveCriticalSection(&cr);
 
 ```
 - 단순히 변수 i에 0으로 초기화하는 작업을 하는 코드의 2가지 예이다
-- Atomic operation을 사용할경우 변수 i를 0으롤 초기화 할경우 다른 스레드는 초기화가 진행되는 동안 변수 i 를 읽거나 쓸 수 없다.
+- Atomic operation을 사용할경우 변수 i를 0으로 초기화 할 경우 다른 스레드는 초기화가 진행되는 동안 변수 i 를 읽거나 쓸 수 없다.
 - 반면 Critical Section을 사용할 경우 결과는 같지만 원하는 lock 을 얻지 못할 경우, 스레드는 대기상태로 전환되고 다른 스레드로 Context switiching 하는 작업이 일어나며 이것은 CPU 입장에서 상당한 CPU 사이클을 사용하는 매우 비싼 작업이다.
 - Automic operation은 Context switching을 발생시키지 않는다.
 
