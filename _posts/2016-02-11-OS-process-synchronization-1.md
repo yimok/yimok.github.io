@@ -42,7 +42,7 @@ Process의 동기화가 무엇인지를 알아보고 Process Synchronization 에
 
 ### interaction의 문제점 1
 
-```
+```cpp
 static int iValue[2];
 
 void interrupt ReadVemp(void){
@@ -71,7 +71,7 @@ void main(void)
 - 하지만 위 코드와 같이 인터럽트 서비스 루틴과 프로세스가 함께 Interaction 하면서 작동하게 되면 올바른 계산 결과를 내지 못하는데 이런 상황을 Non-Reentrant Code 라고 한다.
 - 위 코드에서 ISR 부분과 main으로 작성된 유저 프로세스가 서로 경합을 하면서 자원을 공유하려 한다.(iValue[] 배열자원)
 
-```
+```cpp
 //Solution
 
 static int iValue[2];
@@ -106,7 +106,7 @@ void main(void)
 
 ### interaction의 문제점 2
 
-```
+```cpp
 // Buffer
 
 if(BufferFlag)
