@@ -37,6 +37,7 @@ image:
 using System;
 using System.IO;
 using System.Threading;
+
 namespace monitorclass
 {
 class Program
@@ -88,6 +89,7 @@ class Program
 
 
 ```
+
 <figure>
 	<img src="/images/post7-2.PNG" alt="">
 </figure>
@@ -105,6 +107,7 @@ class Program
 
 using System;
 using System.Threading;
+
 namespace waitndpulesmethod
 {
     class TickTock
