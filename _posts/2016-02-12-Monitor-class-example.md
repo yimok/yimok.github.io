@@ -183,7 +183,7 @@ namespace waitndpulesmethod
 ```
 
 <figure>
-	<img src="/images/post7-2.PNG" alt="">
+	<img src="/images/post7-1.PNG" alt="">
 </figure>
 
 - Monitor.Pulse() 와 Monitor.Wait() 를 사용한 예제이다
