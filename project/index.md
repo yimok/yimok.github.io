@@ -1,5 +1,5 @@
 ---
-layout: project-index
+layout: page
 title: Project
 excerpt: ""
 image:
