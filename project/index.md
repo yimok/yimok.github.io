@@ -3,7 +3,7 @@ layout: page
 title: Project
 excerpt: ""
 image:
-  feature: back7.jpg
+  feature: back8.jpg
 
 ---
 
