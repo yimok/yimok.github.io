@@ -32,7 +32,7 @@ image:
 
 ### Monitor class 예제  1
 
-```{.cs}
+```cs
 
 using System;
 using System.IO;
@@ -86,8 +86,6 @@ class Program
         }
     }
 }
-
-
 ```
 
 <figure>
@@ -102,8 +100,7 @@ class Program
 ### montior class 예제 2
 
 
-
-```{.cs}
+```cs
 
 using System;
 using System.Threading;
@@ -183,7 +180,6 @@ namespace waitndpulesmethod
         }
     }
 }
-
 ```
 
 <figure>
