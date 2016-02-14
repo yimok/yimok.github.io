@@ -24,7 +24,7 @@ image:
 
 * Programming Languages: C/C++, Java, Python, Php
 * System: Linux , Window 7 , 
-* Computer knowledge : Operating System , Computer Architecture , Data Struecture , algorithm
+* Computer knowledge : Operating System , Computer Architecture , Data Structure , algorithm
 * Math and Science: Discrete Mathematics, Calculus, Physics, Probability and statistics , 
 Linear Algebra  
 
