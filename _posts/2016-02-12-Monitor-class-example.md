@@ -95,6 +95,7 @@ class Program
 - 생성된 3개의 쓰레드가 하나의 파일(공유 자원)에 접근하기 위한 소스코드 이다.
 - 한 쓰레드가 작업을 진행하기 전에 Monitor.Enter() 호출하여 Monitor 에들어가 작업을 하는동안에는 다른 쓰레드가 접근할 수 없다.
 - Monitor.Exit() 를 호출하여 Monitor 에서 나오면 공유자원을 해제하고 다음 쓰레드에게 자원을 넘긴다.
+- 결과가 꼭 쓰레드 0, 쓰레드 1, 쓰레드 2 순서로 출력되진 않는다. 쓰레드가 꼭 생성된 순서대로 실행되는것으 아니기 때문이다.
  
 
 ### montior class 예제 2
@@ -187,5 +188,5 @@ namespace waitndpulesmethod
 </figure>
 
 - Monitor.Pulse() 와 Monitor.Wait() 를 사용한 예제이다
-- Monitor.Pulse()는 대기 중인 큐에 포함된 스레드에 잠겨 있는 개체의 상태 변경을 알린다.
+- Monitor.Pulse()는 대기 중인 큐에 포함된 스레드에 잠겨 있는 개체의 상태 변경을 알린다.(condition 변수의 signal() 과 같다고 보면 될것 같다)
 - Monitor.Wait()는 개체의 잠금을 해제한 다음 잠금을 다시 가져올 때까지 현재 스레드를 차단한다.
