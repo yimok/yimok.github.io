@@ -29,7 +29,7 @@ C로 Banker 알고리즘 구현해 보았습니다.
 아래 표를보고 Banker 알고리즘을 구현하겠습니다.
 
 <figure>
-	<img src="/images/ba1.PNG" alt="">
+	<img src="/images/ba2.PNG" alt="">
 </figure>
 
 
@@ -169,7 +169,7 @@ void main() {
 ### 결과
 
 <figure>
-	<img src="/images/ba2.PNG" alt="">
+	<img src="/images/ba1.PNG" alt="">
 </figure>
 
 
