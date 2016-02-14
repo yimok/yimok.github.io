@@ -6,20 +6,11 @@ modified: 2016-02-13
 tags: [blog]
 comments: true
 image:
-  feature: back1.jpg
+  feature: back6.jpg
 ---
 
 C로 Banker 알고리즘 구현해 보았습니다.
 
-<section id="table-of-contents" class="toc">
-  <header>
-    <h3>Overview</h3>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section><!-- /#table-of-contents -->
 
 
 ## Banker 알고리즘
@@ -48,10 +39,12 @@ void main() {
 
 
 	//allocation
-	int Pall[5][3] = { { 0, 1, 0 }, { 2, 0, 0 }, { 3, 0, 2 }, { 2, 1, 1 }, { 0, 0, 2 } };
+	int Pall[5][3] = { { 0, 1, 0 }, { 2, 0, 0 }, 
+						{ 3, 0, 2 }, { 2, 1, 1 }, { 0, 0, 2 } };
 
 	//Max 
-	int Pmax[5][3] = { { 7, 5, 3 }, { 3, 2, 2 }, { 9, 0, 2 }, { 2, 2, 2 }, { 4, 3, 3 } };
+	int Pmax[5][3] = { { 7, 5, 3 }, { 3, 2, 2 }, 
+						{ 9, 0, 2 }, { 2, 2, 2 }, { 4, 3, 3 } };
 
 	//Need = Max - allocation
 	int Pneed[5][3];
@@ -71,7 +64,8 @@ void main() {
 	cout << "Banker's Algorithm \n" << endl;
 	cout << "available Resource" << endl;
 	cout << "A" << '\t' << "B" << '\t' << "C" << endl;
-	cout << available[0] << '\t' << available[1] << '\t' << available[2] << "\n" << endl;
+	cout << available[0] << '\t' << available[1];
+	cout << '\t' << available[2] << "\n" << endl;
 	cout << "Safe Sequence \n ";
 	cout << "[" << "   ";
 
@@ -79,7 +73,8 @@ void main() {
 	for (int j = 0; j < 5; j++)
 	{
 		if (finish[0] == false){
-			if (available[0] >= Pneed[0][0] && available[1] >= Pneed[0][1] && available[2] >= Pneed[0][2])
+			if (available[0] >= Pneed[0][0] && available[1] >= Pneed[0][1] 
+				&& available[2] >= Pneed[0][2])
 			{
 				cout << "process0" << "   ";
 
@@ -96,7 +91,8 @@ void main() {
 			}
 		}
 		if (finish[1] == false){
-			if (available[0] >= Pneed[1][0] && available[1] >= Pneed[1][1] && available[2] >= Pneed[1][2])
+			if (available[0] >= Pneed[1][0] && available[1] >= Pneed[1][1] 
+				&& available[2] >= Pneed[1][2])
 			{
 				cout << "process1" << "   ";
 				available[0] = available[0] - Pneed[1][0];
@@ -110,7 +106,8 @@ void main() {
 			}
 		}
 		if (finish[2] == false){
-			if (available[0] >= Pneed[2][0] && available[1] >= Pneed[2][1] && available[2] >= Pneed[2][2])
+			if (available[0] >= Pneed[2][0] && available[1] >= Pneed[2][1] 
+				&& available[2] >= Pneed[2][2])
 			{
 				cout << "process2" << "   ";
 				available[0] = available[0] - Pneed[2][0];
@@ -124,7 +121,8 @@ void main() {
 			}
 		}
 		if (finish[3] == false){
-			if (available[0] >= Pneed[3][0] && available[1] >= Pneed[3][1] && available[2] >= Pneed[3][2])
+			if (available[0] >= Pneed[3][0] && available[1] >= Pneed[3][1] 
+				&& available[2] >= Pneed[3][2])
 			{
 				cout << "process3" << "   ";
 				available[0] = available[0] - Pneed[3][0];
@@ -138,7 +136,8 @@ void main() {
 			}
 		}
 		if (finish[4] == false){
-			if (available[0] >= Pneed[4][0] && available[1] >= Pneed[4][1] && available[2] >= Pneed[4][2])
+			if (available[0] >= Pneed[4][0] && available[1] >= Pneed[4][1] 
+				&& available[2] >= Pneed[4][2])
 			{
 				cout << "process4" << "   ";
 				available[0] = available[0] - Pneed[4][0];
