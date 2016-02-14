@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[OS] Abstraction and Decomposition"
-description: "[OS] Abstraction and Decomposition" 
+title: "[OS]Abstraction and Decomposition"
+description: "[OS]Abstraction and Decomposition" 
 modified: 2016-02-13
 tags: [blog]
 comments: true
