@@ -35,16 +35,19 @@ void main() {
 	int A, B, C;
 
 	// process state check
-	bool finish[5] = { false, false, false, false, false };
+	bool finish[5] = { false, false, false, 
+							false, false };
 
 
 	//allocation
 	int Pall[5][3] = { { 0, 1, 0 }, { 2, 0, 0 }, 
-						{ 3, 0, 2 }, { 2, 1, 1 }, { 0, 0, 2 } };
+						{ 3, 0, 2 }, { 2, 1, 1 }, 
+						{ 0, 0, 2 } };
 
 	//Max 
 	int Pmax[5][3] = { { 7, 5, 3 }, { 3, 2, 2 }, 
-						{ 9, 0, 2 }, { 2, 2, 2 }, { 4, 3, 3 } };
+						{ 9, 0, 2 }, { 2, 2, 2 }, 
+						{ 4, 3, 3 } };
 
 	//Need = Max - allocation
 	int Pneed[5][3];
@@ -73,7 +76,8 @@ void main() {
 	for (int j = 0; j < 5; j++)
 	{
 		if (finish[0] == false){
-			if (available[0] >= Pneed[0][0] && available[1] >= Pneed[0][1] 
+			if (available[0] >= Pneed[0][0] 
+				&& available[1] >= Pneed[0][1] 
 				&& available[2] >= Pneed[0][2])
 			{
 				cout << "process0" << "   ";
@@ -91,7 +95,8 @@ void main() {
 			}
 		}
 		if (finish[1] == false){
-			if (available[0] >= Pneed[1][0] && available[1] >= Pneed[1][1] 
+			if (available[0] >= Pneed[1][0] 
+				&& available[1] >= Pneed[1][1] 
 				&& available[2] >= Pneed[1][2])
 			{
 				cout << "process1" << "   ";
@@ -106,7 +111,8 @@ void main() {
 			}
 		}
 		if (finish[2] == false){
-			if (available[0] >= Pneed[2][0] && available[1] >= Pneed[2][1] 
+			if (available[0] >= Pneed[2][0] 
+				&& available[1] >= Pneed[2][1] 
 				&& available[2] >= Pneed[2][2])
 			{
 				cout << "process2" << "   ";
@@ -121,7 +127,8 @@ void main() {
 			}
 		}
 		if (finish[3] == false){
-			if (available[0] >= Pneed[3][0] && available[1] >= Pneed[3][1] 
+			if (available[0] >= Pneed[3][0] 
+				&& available[1] >= Pneed[3][1] 
 				&& available[2] >= Pneed[3][2])
 			{
 				cout << "process3" << "   ";
@@ -136,7 +143,8 @@ void main() {
 			}
 		}
 		if (finish[4] == false){
-			if (available[0] >= Pneed[4][0] && available[1] >= Pneed[4][1] 
+			if (available[0] >= Pneed[4][0] 
+				&& available[1] >= Pneed[4][1] 
 				&& available[2] >= Pneed[4][2])
 			{
 				cout << "process4" << "   ";
