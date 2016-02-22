@@ -64,15 +64,15 @@ image:
 
 - 컴파일러를 거쳐 만들어진 오브젝트 파일 안에는 여러개의 Section이 존재한다.
 - 오브젝트 파일을 구성하는 Unit 들 또는 어떠한 데이터를 묶어놓은 단위들을 Section 이라 한다.
-- 각 섹션들은 추후 메모리에 적재될 독자적인 영역을 가지게 된다. -> 이 영역을 
-- 라고 부른다.
+- 각 섹션들은 추후 메모리에 적재될 독자적인 영역을 가지게 된다. -> 이 영역을 세그먼트라고 부른다.
 - 각 섹션안에는 함수이름이나, 변수이름등 , 여러 심볼들이 존재하고 그 섹셕안에서 자신만의 위치인 offset을 주소로 가진다.
 
 ### 오브젝트 파일을 구성하는 Section 들
 
 - Text section(Code section) : 명령어들이 들어가 있다.(ex: printf("hello); )
-- Data section : 초기화 된 전역 변수들이 저장되어 있다.(ex: int a = 0;)
-- BSS section : 초기화 되지 않은 전역 변수들이 저장되어 있다.(ex: int b;) -> BSS:Block Started by Symbol
+- Data section : 초기화 된 전역 변수, static 변수 들이 저장되어 있다.(ex: int a = 0;)
+- BSS section : 초기화 되지 않은 전역 변수, static 변수 들이 저장되어 있다.(ex: int b;) -> BSS:Block Started by Symbol
+- Stack section : 지역 변수, 매개 변수 들이 저장됨, 함수 호출시 생성되고 함수 종료시 시스템에 반환
 - Ohter section : Relocation table , Sybol table 등이 저장됨
 
 ### 왜 BSS 와 Data 섹션을 구분 하였을까?
