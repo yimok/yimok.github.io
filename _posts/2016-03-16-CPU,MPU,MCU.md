@@ -45,7 +45,7 @@ CPU,MCU,MPU의 차이에 대해 알아보자
 
 ### MCU(Micro Controller Unit)
 <figure>
-	<img src="/images/mcu.PNG" alt="">
+	<img src="/images/mcu.png" alt="">
 </figure>
 
 [그림 출처](http://www.ddaily.co.kr/news/article.html?no=117571)
