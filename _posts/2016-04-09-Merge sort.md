@@ -30,7 +30,7 @@ Divide & Conquer 방법 중 하나인 합병정렬에 대해 알아보자.
 ## 합병 정렬(Merge sort)
 
 <figure>
-	<img src="/images/merge1.PNG" alt="">
+	<img src="/images/merge1.png" alt="">
 </figure>
 
 - 합병 정렬이란 임의의 순서로 저장된 배열에서 값을 탐색하는 알고리즘으로 정렬할 배열을 중심으로 왼쪽 오른쪽으로 재귀하면서 나누어 인덱스가1 즉 1개의 값만 가지게 되었을 경우 나누는 것을 멈추고 나누어진 배열들의 크기를 비교(좌, 우 나눠진 2개씩)해 가면서 다시 합병하여 최종적으로 정렬된 값을 배열에 저장시킨다. 
@@ -44,15 +44,15 @@ Divide & Conquer 방법 중 하나인 합병정렬에 대해 알아보자.
 ```cpp
 
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<malloc.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <malloc.h>
 #pragma warning(disable:4996)        //visual 2013 에서 scanf 및 fprintf, fscanf 사용시 오류 제거
 void merge(int Lsize, int Rsize, int L[], int R[], int S[])
 {
 	int i =0, j =0, k =0;
 	while (i <= Lsize -1 && j <= Rsize -1)    //L배열의 크기와 R배열의 크기와 비교하여 
-	{				    //인덱스가 초과할 경우 반복문을 빠져나온다.						   
+	{				                 //인덱스가 초과할 경우 반복문을 빠져나온다.	
 		if (L[i] < R[j])		    //L배열의 값과 R배열의 값을 비교
 		{
 			S[k] = L[i];            //L배열이 작을경우 S배열에 L을 적재		
@@ -67,15 +67,15 @@ void merge(int Lsize, int Rsize, int L[], int R[], int S[])
 	}
 	
 	for (;;)           //위 반복문을 빠져 나왔을 경우 L배열과 R배열중 하나의 값만 남아있을것이다. 
-	{	       //이 나머지 값을 넣기 위한 반복문 							 
-		if (i > Lsize -1) break;
+	{	               //이 나머지 값을 넣기 위한 반복문 							 
+		if (i > Lsize - 1) break;
 		S[k] = L[i];
 		i++;
 		k++;
 	}
 	for (;;)
 	{
-		if (j > Rsize -1) break;
+		if (j > Rsize - 1) break;
 		S[k] = R[j];
 		j++;
 		k++;
@@ -85,10 +85,10 @@ void mergesort(int size, int S[])
 {
 	if (size>1)
 	{
-		const int mid =size/2;	//size가 만약 4라면  mid=2
+		const int mid = size/2;	//size가 만약 4라면  mid=2
 								   
-		int* L =new int[mid];         //입력된 size가 4라면 L배열의 크기는 2
-		int* R =new int[size- mid];  //입력된 size가 4라면 R배열의 크기는 2 
+		int* L = new int[mid];         //입력된 size가 4라면 L배열의 크기는 2
+		int* R = new int[size- mid];  //입력된 size가 4라면 R배열의 크기는 2 
                                                 //(size - mid = 4 -2 = 2)
 		for (int i =0; i < mid; i++)	//S배열을 나누어 L배열 R배열에 적재시킨다.
 		{
@@ -100,24 +100,24 @@ void mergesort(int size, int S[])
 		}
 		mergesort(mid, L);	             //mergesort 함수를 재귀로 구현하여 
                                                      // 값이 한개가 저장될 때까지 분할 한다. 
-		mergesort(size- mid, R);
-		merge(mid, size- mid, L, R, S); //1개로 분할된 이후 merge 함수를 동작시킨다.
+		mergesort(size - mid, R);
+		merge(mid, size - mid, L, R, S); //1개로 분할된 이후 merge 함수를 동작시킨다.
 	}
 }
 int main()
 {
 	FILE *fin, *fout;				
-	int idx =0;
-	int temp =0;
+	int idx = 0;
+	int temp = 0;
 	char fname[50];				
 	printf("파일명을 입력하세요! 합병정렬 결과는 result.txt 로 저장됩니다. \n( 입력 예 : xxx.txt )");
 	scanf("%s", &fname);
 	//데이터의 개수를 읽어오기 위해 fopen, idx 변수에 데이터 수를 카운트함
 	fin = fopen(fname, "rb");     //파일이름은 입력으로 받기
-	if (fin ==NULL)
+	if (fin == NULL)
 	{
 		printf("파일명이 없습니다.\n");
-		return-1;
+		return - 1;
 	}
 	//파일속에 저장된 데이터의 수를 확인하기위한 반복문  idx에 값 축적
 	while (1)
@@ -128,8 +128,8 @@ int main()
 		idx++;
 	}
 	fseek(fin, 0L, SEEK_SET);		//파일 포인터 위치를 처음으로 리셋
-	int* arr =new int[idx -1];		//동적 배열 할당 축적된 idx값으로 배열크기 결정
-	idx =0;
+	int* arr = new int[idx -1];		//동적 배열 할당 축적된 idx값으로 배열크기 결정
+	idx = 0;
 	
 	while (1)			    //데이터 뽑아서 arr 동적배열에 저장 시키기	
 	{
@@ -146,7 +146,8 @@ int main()
 	for (int i =0; i < idx; i++)
 		fprintf(fout, "%d\n", arr[i]);
 	printf("정렬이 완료되었습니다 프로젝트 폴더내 result.txt 를 확인하세요 \n");
-	return0;
+
+	return 0;
 }
 
 
@@ -161,8 +162,8 @@ int main()
 ### 코드 실행 결과
 
 <figure>
-	<img src="/images/merge2.PNG" alt="">
+	<img src="/images/merge2.png" alt="">
 </figure>
 <figure>
-	<img src="/images/merge3.PNG" alt="">
+	<img src="/images/merge3.png" alt="">
 </figure>
