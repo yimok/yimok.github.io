@@ -10,6 +10,8 @@ image:
 ---
 Divide & Conquer 방법 중 하나인 합병정렬에 대해 알아보자.
  
+
+
 <section id="table-of-contents" class="toc">
   <header>
     <h3>Overview</h3>
