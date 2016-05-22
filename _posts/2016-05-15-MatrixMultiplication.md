@@ -2,7 +2,7 @@
 layout: post
 title: "[알고리즘]연쇄행렬 최소곱셈 알고리즘"
 description: "[알고리즘]연쇄행렬 최소곱셈 알고리즘" 
-modified: 2016-04-14
+modified: 2016-05-15
 tags: [blog]
 comments: true
 image:
@@ -50,7 +50,7 @@ image:
 
 
 
-### 플로이드 알고리즘 구현 소스코드
+### 연쇄행렬 최소곱셈 알고리즘 구현 소스코드
 
 - [코드 다운로드](https://github.com/yimok/yimok.github.io/tree/master/data/MatrixMultiplication)
 
