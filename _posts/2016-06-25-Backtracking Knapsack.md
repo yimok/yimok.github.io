@@ -2,7 +2,7 @@
 layout: post
 title: "[알고리즘]0/1 Knapsack - Bactracking"
 description: "[알고리즘]0/1 Knapsack - Bactracking" 
-modified: 2016-06-20
+modified: 2016-06-25
 tags: [blog]
 comments: true
 image:
@@ -45,9 +45,9 @@ image:
 	<img src="/images/01knapsack2.png" alt="">
 </figure>
 
-### Fractional Knapsack 구현 소스
+### 0/1 Knapsack - Bactracking 구현 소스
 
-- [코드 다운로드](https://github.com/yimok/yimok.github.io/tree/master/data/01_knapsack)
+- [코드 다운로드](https://github.com/yimok/yimok.github.io/tree/master/data/01_knapsack_backtracking)
 
 
 ```cpp
