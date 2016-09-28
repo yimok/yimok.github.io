@@ -6,7 +6,7 @@ modified: 2016-09-25
 tags: [blog]
 comments: true
 image:
-  feature: back6.jpg
+  feature: back1.jpg
 ---
 
 Arm 마이크로 프로세서 종류와 , 클락, 레지스터, RCC 에 대해서 알아보자
@@ -28,7 +28,9 @@ Arm 마이크로 프로세서 종류와 , 클락, 레지스터, RCC 에 대해�
 
 ### 소개
 <figure>
-	<img src="/images/arm.PNG" alt="">
+	<p style="text-align: center;">	
+		<img src="/images/arm.PNG" alt="">
+	</p>
 </figure>
 
 - ARM 이란 프로세서의 코어를 설계하는 회사이다 즉 아키텍처를 설계하는 회사이다 
@@ -56,7 +58,9 @@ Arm 마이크로 프로세서 종류와 , 클락, 레지스터, RCC 에 대해�
 - Hz가 높을수록 시간은 낮아진다. 반대로 Hz가 낮을수록 시간은 증가한다.
 
 <figure>
-	<img src="/images/pulse.png" alt="">
+<p style="text-align: center;">	
+	<img src="/images/pulse.png" alt="" width=400>
+</p>
 </figure>
 
 - 위그림은 5Hz 주파수와 7Hz 주파수를 보여준다.
@@ -71,7 +75,9 @@ Arm 마이크로 프로세서 종류와 , 클락, 레지스터, RCC 에 대해�
 - 분할을 할때 마이크로 프로세서 옆에붙은 오실레이터 or 크리스탈 이 클럭의 분할을 도와준다.
 
 <figure>
+<p style="text-align: center;">	
 	<img src="/images/stm32f4.PNG" alt="">
+</p>
 </figure>
 
 - 위사진에서 보면 보드 중앙의 stm32f4 마이크로프로세서 위에 쇠뭉치같은게 붙어있는데 이것이 오실레이터 또는 크리스탈이다.
@@ -79,7 +85,7 @@ Arm 마이크로 프로세서 종류와 , 클락, 레지스터, RCC 에 대해�
 ### 레지스터(Register)
 
 <figure>
-	<img src="/images/register.PNG" alt="">
+	<img src="/images/register.png" alt="">
 </figure>
 
 - 레지스터는 쉽게말해 기억장치이다. 다수의 플립플롭으로 구성된 메모리 이다.
@@ -117,7 +123,9 @@ Arm 마이크로 프로세서 종류와 , 클락, 레지스터, RCC 에 대해�
 - RCC 역시 메모리상에 있으며 아래 그림과같이 32bit로 블록화 되어있다.
 
 <figure>
-	<img src="/images/rcc1.png" alt="">
+	<p style="text-align: center;">	
+		<img src="/images/rcc1.png" alt="">
+	</p>
 </figure>
 
 - 가장낮은 비트를 LSB , 가장 높은 비트를 MSB 라고 부른다. 이 32개의 bit를 이용하여 RCC를 세팅한다.
@@ -127,7 +135,9 @@ Arm 마이크로 프로세서 종류와 , 클락, 레지스터, RCC 에 대해�
 - 그럼 division 5 로 클럭2 SYSCLK 을 활성화 해보자.
 
 <figure>
-	<img src="/images/rcc2.png" alt="">
+	<p style="text-align: center;">	
+		<img src="/images/rcc2.png" alt="">
+	</p>
 </figure>
 
 - 위 그림과같이 주소를 4bit씩 묶어서 16진수로 주소의 한자리를 표현한다.
@@ -140,7 +150,7 @@ Arm 마이크로 프로세서 종류와 , 클락, 레지스터, RCC 에 대해�
 int *a = (int*a) 0x10000  // RCC의 블럭주소를 찿아간다.
 	*a = 0x38000000  //설정할 값으로 세팅한다.
 
-``
+```
 
 
 
