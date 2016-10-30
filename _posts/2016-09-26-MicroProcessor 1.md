@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[마이크로 프로세서]마이크로 프로세서 기초지식"
-description: "[마이크로 프로세서]마이크로 프로세서 기초지식" 
+title: "[Coretex-M4]마이크로 프로세서 기초지식"
+description: "[Coretex-M4]마이크로 프로세서 기초지식" 
 modified: 2016-09-25
 tags: [blog]
 comments: true
