@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[Coretex-M4]마이크로 프로세서 기초지식"
-description: "[Coretex-M4]마이크로 프로세서 기초지식" 
+title: "[Cortex-M4]마이크로 프로세서 기초지식"
+description: "[Cortex-M4]마이크로 프로세서 기초지식" 
 modified: 2016-09-25
 tags: [blog]
 comments: true
@@ -37,15 +37,15 @@ Arm 마이크로 프로세서 종류와 , 클락, 레지스터, RCC 에 대해�
 - 이러한 코어 아키텍처를 삼성, LG 등과같은 기업이 사서 ARM 프로세서를 제작한다.
 - 클래식 코어버전 : ARM 7 -> ARM 9 -> ARM 11
 - ARM 의 버전은 2씩 올라가며 홀수 를 사용한다. 짝수 ARM 버전은 ARM 직원들이 사용하는 버전이며 시판되기전에 버그를 잡는 용도로 사용된다.
-- 최근에는 ARM Coretex-M , Coretex-R, Coretex-A 버전으로 버전업이되어 출시되었다. 클래식 버전보다 성능이 많이 뛰어나 coretx 라는 단어를 붙이게 되었다.
+- 최근에는 ARM Cortex-M , Cortex-R, Cortex-A 버전으로 버전업이되어 출시되었다. 클래식 버전보다 성능이 많이 뛰어나 cortex(피질) 라는 단어를 붙이게 되었다.
 - M버전(저전력)은 자동차에 사용되며, R버전은 영상처리 카메라, A버전(고성능)은 스마트폰에 사용된다.
  
-## ARM-Coretex-M4 
+## ARM-Cortex-M4 
 
 ### STM32F4
 
 - 실제 사용할 보드는 STM32F4 라는 보드이며 과거 STM 사에서 제작한 32bit 보드로 라이센스를 팔았지만 이름 그대로 STM을 사용하고 있다.
-- STM32F4 ARM-Coretex-M4 프로세서를 사용한다. 최대클럭 168MHZ, DSP, 32bit의 특징을 가지고 있다.
+- STM32F4 ARM-cortex-M4 프로세서를 사용한다. 최대클럭 168MHZ, DSP, 32bit의 특징을 가지고 있다.
 - 마이프로세서에서 가장 중요한 것은 +와 GND를 물려서 밥을 주고, 타이머를 동작시켜서 레지스터를 사용하여 데이터를 이동시키는 것이 마이크로 프로세서에서 하는 가장 중요한 동작이다.
 - 마이크로프로세서는 시간, 즉 펄스(Pulse) 에 따라 일을 한다.
  
@@ -153,4 +153,4 @@ int *a = (int*a) 0x10000  // RCC의 블럭주소를 찿아간다.
 ```
 
 
-
+Reference: Sang Youn Kim - Micro processor , Korea university of technology & education
