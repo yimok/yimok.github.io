@@ -33,14 +33,13 @@ image:
 
 # 사용한 Open API
 
-|             사용 API       | 주소               |
-| ---------------------- | ------------------------ |
-| 서울시 공원 API               |http://data.seoul.go.kr/openinf/openapiview.jsp?infId=OA-394)    |                                                                          
-| 서울시 공중화장실 API                |http://data.seoul.go.kr/openinf/openapiview.jsp?infId=OA-162|                                                                                                     
-| 서울시 자전거 대여소 정보 API               |http://data.seoul.go.kr/openinf/openapiview.jsp?infId=OA-12969 |         
-| 서울시 자전거 대여소 정보 API               |http://data.seoul.go.kr/openinf/openapiview.jsp?infId=OA-12969) |       
-| 다음 로컬 주소 -> 좌표변환 API               |https://developers.daum.net/services/apis/local/geo/addr2coord |         
-| 다음 키워드로 장소검색 API               |https://developers.daum.net/services/apis/local/v1/search/keyword.format |         
+
+ - [서울시 공원 API](http://data.seoul.go.kr/openinf/openapiview.jsp?infId=OA-394)                                                                         
+ - [서울시 공중화장실 API](http://data.seoul.go.kr/openinf/openapiview.jsp?infId=OA-162)                                                                                                     
+ - [서울시 자전거 대여소 정보 API](http://data.seoul.go.kr/openinf/openapiview.jsp?infId=OA-12969)         
+ - [서울시 자전거 대여소 정보 API](http://data.seoul.go.kr/openinf/openapiview.jsp?infId=OA-12969)      
+ - [다음 로컬 주소 -> 좌표변환 API](https://developers.daum.net/services/apis/local/geo/addr2coord)       
+ - [다음 키워드로 장소검색 API](https://developers.daum.net/services/apis/local/v1/search/keyword.format)        
 
 
 
@@ -56,14 +55,11 @@ image:
 - 요청주소(로컬) : [http://localhost:8080/seoul/park/info](http://localhost:8080/seoul/park/info)
 - 요청주소(아마존 : [http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/info?](http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/info?)
 
-|             출력변수      | 타입           |       설명               |
-| ---------------------- | ------------------------ | ------------------------ |
-| xWGS84              |           Double        |      공원의 x좌표                    |                                                                     
-| yWGS84           |             Double      |         공원의 y좌표            |                                                                                                      
-| pname        |    String        |              공원의 이름        |        
-| rcount           |    Int            |    공원 내의 자전거 대여소 수                 |    
-| Bcount         |         Int      |      공원 내의 공공 화장실 수              |       
-
+<figure>
+<p style="text-align: center;">	
+	<img src="/images/sheet1.PNG">
+</p>
+</figure>
 
 ## Nearest Station
 
@@ -71,10 +67,11 @@ image:
 - 요청주소(아마존) : [http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/neareststation?](http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/neareststation?)
 
 
-|             출력변수      | 타입           |       설명               |
-| ---------------------- | ------------------------ | ------------------------ |
-| station              |        HashMap<String, Double>       |  공원 인근의 지하철 역 3곳의 이름과 거리     |                                                                     
-| pname         |             Double      |         공원의 이름          |                                                                                                      
+<figure>
+<p style="text-align: center;">	
+	<img src="/images/sheet2.PNG">
+</p>
+</figure>
 
 
 ## 주소에 따른 공원 검색
@@ -83,18 +80,18 @@ image:
 - 요청주소(아마존) : [http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/nearest?address=주소&parkc=5](http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/nearest?address=주소&parkc=5)
 
 
-|             요청변수      | 타입           |       설명               |  값의 범위            |
-| ---------------------- | ------------------------ | ------------------------ |------------------------ |
-| address             |        string       |  검색할 주소     |        |                                                                 
-| parkc         |             string      |         출력할 공원 수          |   최소1, 최대 97   |                                                                                                       
+<figure>
+<p style="text-align: center;">	
+	<img src="/images/sheet4.PNG">
+</p>
+</figure>
 
 
-|             출력변수      | 타입           |       설명               | 
-| ---------------------- | ------------------------ | ------------------------ | 
-| curx          |        Double      |  입력한 주소의 x 좌표     |                                                                       
-| cury         |         Double      |         입력한 주소의 y좌표          |                                                                                                        
-| curlocation         |         String      |         주소         | 
-| park       |         HashMap<String,Double>      |         주소와 가장 가까운 공원 3곳의 이름과 거리        | 
+<figure>
+<p style="text-align: center;">	
+	<img src="/images/sheet5.PNG">
+</p>
+</figure>
 
 
 # 결과 사진 
