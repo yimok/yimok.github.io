@@ -57,7 +57,7 @@ image:
 
 <figure>
 <p style="text-align: center;">	
-	<img src="/images/sheet1.PNG">
+	<img src="/images/sheet1.png">
 </p>
 </figure>
 
@@ -69,7 +69,7 @@ image:
 
 <figure>
 <p style="text-align: center;">	
-	<img src="/images/sheet2.PNG">
+	<img src="/images/sheet2.png">
 </p>
 </figure>
 
@@ -82,14 +82,14 @@ image:
 
 <figure>
 <p style="text-align: center;">	
-	<img src="/images/sheet4.PNG">
+	<img src="/images/sheet4.png">
 </p>
 </figure>
 
 
 <figure>
 <p style="text-align: center;">	
-	<img src="/images/sheet5.PNG">
+	<img src="/images/sheet5.png">
 </p>
 </figure>
 
