@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: "Web service Computing"
 description: "Web service Computing" 
 modified: 2016-12-25
