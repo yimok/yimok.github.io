@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Web service Computing"
+title: ""
 modified: 2016-12-25
 tags: [blog]
 comments: true
@@ -21,6 +21,7 @@ image:
 
 
 # Web Service Computing Term-Project
+--------
 - REST, AWS를 활용한 공원 정보 제공
 - github : [https://github.com/yimok/wsc](https://github.com/yimok/wsc)
 
