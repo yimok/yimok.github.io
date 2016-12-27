@@ -1,16 +1,14 @@
 ---
 layout: post
-title: "[Cortex-M4]Timer and Interrupt"
-description: "[Cortex-M4]Timer and Interrupt" 
-modified: 2016-11-03
+title: "Web service Computing"
+description: "Web service Computing" 
+modified: 2016-12-25
 tags: [blog]
 comments: true
 image:
-  feature: back1.jpg
+  feature: back8.jpg
 ---
 
-Cortex-M4 의 타이머(Timer)와 인터럽트(Interrupt)에 대해 알아보고, 타이머를 만들 수 있는 가장 기본적인 하드웨어인 플립플롭에 대해서도 알아보자
- 
 
 <section id="table-of-contents" class="toc">
   <header>
