@@ -51,7 +51,7 @@ image:
 
 # 사용 명세서
 
-## Park Info
+## 1.Park Info
 
 - 요청주소(로컬) : [http://localhost:8080/seoul/park/info](http://localhost:8080/seoul/park/info)
 - 요청주소(아마존 : [http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/info?](http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/info?)
@@ -62,7 +62,7 @@ image:
 </p>
 </figure>
 
-## Nearest Station
+## 2.Nearest Station
 
 - 요청주소(로컬) : [http://localhost:8080/seoul/park/neareststation](http://localhost:8080/seoul/park/neareststation)
 - 요청주소(아마존) : [http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/neareststation?](http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/neareststation?)
@@ -75,10 +75,10 @@ image:
 </figure>
 
 
-## 주소에 따른 공원 검색
+## 3.주소에 따른 공원 검색
 
-- 요청주소(로컬) : [http://localhost:8080/seoul/park/nearest?address=주소&parkc=5](http://localhost:8080/seoul/park/nearest?address=주소&parkc=5)
-- 요청주소(아마존) : [http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/nearest?address=주소&parkc=5](http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/nearest?address=주소&parkc=5)
+- 요청주소(로컬) : [http://localhost:8080/seoul/park/nearest?address=주소&parkc=5](http://localhost:8080/seoul/park/nearest?address=노원구&parkc=5)
+- 요청주소(아마존) : [http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/nearest?address=주소&parkc=5](http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/nearest?address=노원구&parkc=5)
 
 
 <figure>
