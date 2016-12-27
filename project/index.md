@@ -22,7 +22,7 @@ image:
 
 # Web Service Computing Term-Project
 - REST, AWS를 활용한 공원 정보 제공
-- github : [URL](https://github.com/yimok/wsc)
+- github : [https://github.com/yimok/wsc](https://github.com/yimok/wsc)
 
 # 개발 환경
 - Spring Framework
