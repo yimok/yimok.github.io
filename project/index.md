@@ -1,11 +1,16 @@
----
-layout: page
-title: Project
-excerpt: ""
-image:
-  feature: back8.jpg
 
 ---
+layout: post
+title: "Web Service Computing"
+description: "Web Service Computing" 
+modified: 2016-12-253
+tags: [blog]
+comments: true
+image:
+  feature: back8.jpg
+---
+
+
 
 <section id="table-of-contents" class="toc">
   <header>
