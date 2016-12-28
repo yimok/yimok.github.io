@@ -95,7 +95,11 @@ image:
 </figure>
 
 
-# 결과 사진 
+# 결과 사진
+ 
+- 유저 화면주소(로컬) : [http://localhost:8080/](http://localhost:8080/)
+- 유저 화면주소(아마존) : [http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/](http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/)
+
 
 <figure>
 <p style="text-align: center;">	
