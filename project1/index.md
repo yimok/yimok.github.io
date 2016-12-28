@@ -54,7 +54,7 @@ image:
 ## 1.Park Info
 
 - 요청주소(로컬) : [http://localhost:8080/seoul/park/info](http://localhost:8080/seoul/park/info)
-- 요청주소(아마존 : [http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/info?](http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/info?)
+- 요청주소(아마존) : [http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/info?](http://ec2-52-199-192-231.ap-northeast-1.compute.amazonaws.com/seoul/park/info?)
 
 <figure>
 <p style="text-align: center;">	
