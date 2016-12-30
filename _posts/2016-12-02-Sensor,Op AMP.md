@@ -40,7 +40,7 @@ image:
 
 
 
-### 전외선 센서
+### 적외선 센서
 
 <figure>
 <p style="text-align: center;">	
