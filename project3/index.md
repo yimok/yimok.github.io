@@ -27,8 +27,10 @@ image:
 
 # 개발 환경
 - Spring Framework - Web App
-- Node.js/Python - Gateway(Mobius YT/Thyme 적용)
-- MySql DB
+- Gateway(Mobius YT-2.1.15 / Thyme-1.6.5) - Node.js/Python 사용
+- MySql DB v5.7
+- Server Node.js v6.9.1 / mosquitto v1.4.10
+- Gateway Node.js v0.10.29 / mosquitto v1.4.10
 
 # 사용 디바이스 및 센서
 - End Device : Arduino Uno , 적외선 센서 , 3축 가속도 센서, ZigBee
