@@ -23,6 +23,15 @@ MVC Pattern으로 BankSystem을 만들어 보자.
 
 ## MVC Pattern - BankSystem
 
+###DB 구성
+
+<figure>
+<p style="text-align: center;">	
+	<img src="/images/book6.png">
+</p>
+</figure>
+
+###소스 코드
 ```java
 //Main
 
@@ -440,4 +449,17 @@ public class BankDAO {
 
 ```
 
+###결과 사진
+
+<figure>
+<p style="text-align: center;">	
+	<img src="/images/book7.png">
+</p>
+</figure>
+
+<figure>
+<p style="text-align: center;">	
+	<img src="/images/book8.png">
+</p>
+</figure>
 
