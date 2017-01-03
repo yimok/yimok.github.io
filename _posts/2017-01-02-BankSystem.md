@@ -451,7 +451,7 @@ public class BankDAO {
 
 ```
 
-###결과 사진
+### 결과 사진
 
 <figure>
 <p style="text-align: center;">	
