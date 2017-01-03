@@ -23,7 +23,7 @@ MVC Pattern으로 BankSystem을 만들어 보자.
 
 ## MVC Pattern - BankSystem
 
-###DB 구성
+### DB 구성
 
 <figure>
 <p style="text-align: center;">	
@@ -31,7 +31,9 @@ MVC Pattern으로 BankSystem을 만들어 보자.
 </p>
 </figure>
 
-###소스 코드
+### 소스 코드
+
+
 ```java
 //Main
 
