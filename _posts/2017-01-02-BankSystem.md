@@ -2,7 +2,7 @@
 layout: post
 title: "MVC Pattern으로 BankSystem 만들기"
 description: "MVC Pattern으로 BankSystem 만들기"
-modified: 2017-01-03
+modified: 2017-01-02
 tags: [blog]
 comments: true
 image:
