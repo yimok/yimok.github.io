@@ -6,6 +6,7 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
   <loc>http://yimoyimo.tk/</loc>
   <lastmod>2016-02-26T09:54:58+00:00</lastmod>
@@ -97,5 +98,14 @@
 <url>
   <loc>http://yimoyimo.tk/OS-evolution/</loc>
   <lastmod>2016-02-26T09:54:58+00:00</lastmod>
+</url>
+
+<url>
+  <loc>http://yimoyimo.tk/ADC/</loc>
+  <lastmod>2016-12-26T09:54:58+00:00</lastmod>
+</url>
+<url>
+  <loc>http://yimoyimo.tk/PWM/</loc>
+  <lastmod>2016-12-26T09:54:58+00:00</lastmod>
 </url>
 </urlset>
