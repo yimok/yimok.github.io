@@ -46,7 +46,8 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 	<img src="/images/cudasetup2.png">
 </p>
 </figure>
-4. 프로젝트와 함께 kernel.cu라는 이름의 파일이 생성되고 kernel.cu 안의 내용을 지우고 자신이 원하는 CUDA 프로그래밍 코드를 작성하고 평소에 Visual Studio 사용했던 그대로 컴파일 및 빌드를 진행하면 됩니다.
+
+- 프로젝트와 함께 kernel.cu라는 이름의 파일이 생성되고 kernel.cu 안의 내용을 지우고 자신이 원하는 CUDA 프로그래밍 코드를 작성하고 평소에 Visual Studio 사용했던 그대로 컴파일 및 빌드를 진행하면 됩니다.
 
 ## OpenCV
 
