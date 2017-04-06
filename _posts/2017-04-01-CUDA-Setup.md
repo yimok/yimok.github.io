@@ -29,6 +29,7 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 - 본인은 GEFORCE 840M 그래픽 카드를 사용하며 여기에 CUDA 맥스웰 아키텍처가 적용되어 있습니다.
 - Visual Studio 2012 사용
 - [CUDA 8.0 설치파일 다운로드](https://developer.nvidia.com/cuda-downloads)
+
 1. 위 링크에서 자신의 운영체제에 맞는 CUDA 8.0 을 다운로드받아 설치를 진행합니다. -> nvidia experience는 설치 안하셔도 됩니다.
 2. Visual Studio를 실행하고 -> 파일 -> 새로만들기 -> 프로젝트
 
@@ -53,8 +54,10 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 
 - [CUDA 8.0 설치파일 다운로드](https://sourceforge.net/projects/opencvlibrary/files/opencv-win/2.4.13/opencv-2.4.13.exe/download
 )
+
 1. 위 링크로 들어가면 OpenCV 다운로드가 진행되며, 다운로드 완료후 설치를 진행합니다 이때 설치를 C:\opencv 에 해줍시다.
 
+<figure>
 <p style="text-align: center;">	
 	<img src="/images/cudasetup9.png">
 </p>
@@ -64,6 +67,7 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 
 3. 내PC -> 속성 -> 고급시스템 설정 -> 고급 탭의 환경변수 클릭
 
+<figure>
 <p style="text-align: center;">	
 	<img src="/images/cudasetup3.png">
 </p>
@@ -71,6 +75,7 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 
 4. 위 그림처럼 상단의 PATH를 열고 
 
+<figure>
 <p style="text-align: center;">	
 	<img src="/images/cudasetup4.png">
 </p>
@@ -78,21 +83,24 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 
 5. %OPENCV_DIR%\bin 추가
 
+<figure>
 <p style="text-align: center;">	
 	<img src="/images/cudasetup5.png">
 </p>
 </figure>
 
-6. Visual Studio 실행 후 프로젝트를 생성하고 위 그림처럼 왼쪽 창에서 속성 관리자 탭 -> Debug | Win32 -> Microsoft.Cpp.Win32.user 오른쪽 클릭 속성 클릭
+6. Visual Studio 실행 후 프로젝트를 생성하고 위 그림처럼 왼쪽 창에서 속성 관리자 탭 -> Debug/Win32 -> Microsoft.Cpp.Win32.user 오른쪽 클릭 속성 클릭
 
+<figure>
 <p style="text-align: center;">	
 	<img src="/images/cudasetup6.png">
 </p>
 </figure>
 
-7. C/C++ -> 일반 -> 추가 포함 디렉토리 편집을 눌러 -> 그림과 같이 $(OPENCV_DIR)\..\..\include 을 추가
+7. C/C++ -> 일반 -> 추가 포함 디렉토리 편집을 눌러 -> 그림과 같이 3번 을 추가
 
 
+<figure>
 <p style="text-align: center;">	
 	<img src="/images/cudasetup8.png">
 </p>
@@ -100,6 +108,7 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 
 8. 링커 -> 일반 -> 추가 라이브러리 디렉터리에 위 그림처럼 $(OPENCV_DIR)\lib 추가
 
+<figure>
 <p style="text-align: center;">	
 	<img src="/images/cudasetup7.png">
 </p>
