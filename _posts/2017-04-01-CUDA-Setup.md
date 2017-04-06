@@ -30,8 +30,8 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 - Visual Studio 2012 사용
 - [CUDA 8.0 설치파일 다운로드](https://developer.nvidia.com/cuda-downloads)
 
-1. 위 링크에서 자신의 운영체제에 맞는 CUDA 8.0 을 다운로드받아 설치를 진행합니다. -> nvidia experience는 설치 안하셔도 됩니다.
-2. Visual Studio를 실행하고 -> 파일 -> 새로만들기 -> 프로젝트
+- 위 링크에서 자신의 운영체제에 맞는 CUDA 8.0 을 다운로드받아 설치를 진행합니다. -> nvidia experience는 설치 안하셔도 됩니다.
+- Visual Studio를 실행하고 -> 파일 -> 새로만들기 -> 프로젝트
 
 <figure>
 <p style="text-align: center;">	
@@ -39,7 +39,7 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 </p>
 </figure>
 
-3. 위 그림과 같이 NVIDIA 항목에 CUDA 8.0 Runtime 을 눌러 프로젝트를 생성해줍니다.
+- 위 그림과 같이 NVIDIA 항목에 CUDA 8.0 Runtime 을 눌러 프로젝트를 생성해줍니다.
 
 <figure>
 <p style="text-align: center;">	
@@ -55,7 +55,7 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 - [CUDA 8.0 설치파일 다운로드](https://sourceforge.net/projects/opencvlibrary/files/opencv-win/2.4.13/opencv-2.4.13.exe/download
 )
 
-1. 위 링크로 들어가면 OpenCV 다운로드가 진행되며, 다운로드 완료후 설치를 진행합니다 이때 설치를 C:\opencv 에 해줍시다.
+- 위 링크로 들어가면 OpenCV 다운로드가 진행되며, 다운로드 완료후 설치를 진행합니다 이때 설치를 C:\opencv 에 해줍시다.
 
 <figure>
 <p style="text-align: center;">	
@@ -63,9 +63,9 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 </p>
 </figure>
 
-2. 명령 프롬프트를 관리자 권한으로 실행 후 setx -m OPENCV_DIR C:\opencv\build\x86\vc11 입력
+- 명령 프롬프트를 관리자 권한으로 실행 후 setx -m OPENCV_DIR C:\opencv\build\x86\vc11 입력
 
-3. 내PC -> 속성 -> 고급시스템 설정 -> 고급 탭의 환경변수 클릭
+- 내PC -> 속성 -> 고급시스템 설정 -> 고급 탭의 환경변수 클릭
 
 <figure>
 <p style="text-align: center;">	
@@ -73,7 +73,7 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 </p>
 </figure>
 
-4. 위 그림처럼 상단의 PATH를 열고 
+- 위 그림처럼 상단의 PATH를 열고 
 
 <figure>
 <p style="text-align: center;">	
@@ -81,7 +81,7 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 </p>
 </figure>
 
-5. %OPENCV_DIR%\bin 추가
+- %OPENCV_DIR%\bin 추가
 
 <figure>
 <p style="text-align: center;">	
@@ -89,7 +89,7 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 </p>
 </figure>
 
-6. Visual Studio 실행 후 프로젝트를 생성하고 위 그림처럼 왼쪽 창에서 속성 관리자 탭 -> Debug/Win32 -> Microsoft.Cpp.Win32.user 오른쪽 클릭 속성 클릭
+- Visual Studio 실행 후 프로젝트를 생성하고 위 그림처럼 왼쪽 창에서 속성 관리자 탭 -> Debug/Win32 -> Microsoft.Cpp.Win32.user 오른쪽 클릭 속성 클릭
 
 <figure>
 <p style="text-align: center;">	
@@ -97,7 +97,7 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 </p>
 </figure>
 
-7. C/C++ -> 일반 -> 추가 포함 디렉토리 편집을 눌러 -> 그림과 같이 3번 을 추가
+- C/C++ -> 일반 -> 추가 포함 디렉토리 편집을 눌러 -> 그림과 같이 3번 을 추가
 
 
 <figure>
@@ -106,7 +106,7 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 </p>
 </figure>
 
-8. 링커 -> 일반 -> 추가 라이브러리 디렉터리에 위 그림처럼 $(OPENCV_DIR)\lib 추가
+- 링커 -> 일반 -> 추가 라이브러리 디렉터리에 위 그림처럼 $(OPENCV_DIR)\lib 추가
 
 <figure>
 <p style="text-align: center;">	
@@ -114,9 +114,9 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 </p>
 </figure>
 
-9. 이어서 위 그림처럼 링커 -> 입력 -> 추가 종속성 편집을 눌러 아래 파일을 다운로드 받고 내용을 추가
-10. [OpenCV_lib.txt](https://github.com/yimok/yimok.github.io/tree/master/data/OpenCV)
-11. OpenCV 적용완료
+- 이어서 위 그림처럼 링커 -> 입력 -> 추가 종속성 편집을 눌러 아래 파일을 다운로드 받고 내용을 추가
+- [OpenCV_lib.txt](https://github.com/yimok/yimok.github.io/tree/master/data/OpenCV)
+- OpenCV 적용완료
 
 
 Reference: Hyeong Ju Kang - Embedded programming , Korea university of technology & education
