@@ -22,8 +22,8 @@ image:
 
 # TECHNICAL SKILLS
 
-* Programming Languages: C/C++, Java, Python, javascript, 
-* Framework : Node.js, Spring
+* Programming Languages: C/C++, Java, Python, javascript, Node.js
+* Framework :  Spring
 * System: Linux , Window 7/10 , 
 * Computer knowledge : Operating System , Computer Architecture , Data Structure , Algorithm , Computer Network , Database ,  Basic Electronics, Digital Engineering , Micro Processor, Develpoment of IoT, Web Service Computing , System Programming
 * Math and Science: Discrete Mathematics, Calculus, Physics, Probability and statistics , 
