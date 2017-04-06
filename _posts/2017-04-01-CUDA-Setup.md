@@ -117,3 +117,6 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 9. 이어서 위 그림처럼 링커 -> 입력 -> 추가 종속성 편집을 눌러 아래 파일을 다운로드 받고 내용을 추가
 10. [OpenCV_lib.txt](https://github.com/yimok/yimok.github.io/tree/master/data/OpenCV)
 11. OpenCV 적용완료
+
+
+Reference: Hyeong Ju Kang - Embedded programming , Korea university of technology & education
