@@ -120,4 +120,4 @@ CUDA 를 사용하여 병렬 프로그래밍을 하기위한 CUDA 설치 및 적
 - OpenCV 적용완료
 
 
-Reference: Hyeong Ju Kang - Embedded programming , Korea university of technology & education
+Reference: Hyeong Ju Kang - Embedded programming , KOREATECH
