@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Design Pattern]Strategy Pattern
+title: "[Design Pattern]Strategy Pattern"
 description: "[Design Pattern]Strategy Pattern"
 modified: 2017-04-05
 tags: [blog]
