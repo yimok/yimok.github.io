@@ -27,7 +27,7 @@ Observer Pattern 에 대한 이해와 실습
 
 <figure>
 <p style="text-align: center;">	
-	<img src="/images/observer1.png">
+	<img src="/images/observer1.PNG">
 </p>
 </figure>
 
@@ -37,7 +37,7 @@ Observer Pattern 에 대한 이해와 실습
 
 <figure>
 <p style="text-align: center;">	
-	<img src="/images/observer uml.png">
+	<img src="/images/observer uml.PNG">
 </p>
 </figure>
 
