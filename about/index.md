@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hyo Kyun Im
+title: Hyo Kyun Yim
 tags: "My personal history"
 modified: 2016-11-04
 comments: true
@@ -10,7 +10,7 @@ image:
 ---
 
 # Introduce 
-* Hyo Kyun Im(임효균)
+* Hyo Kyun Yim(임효균)
 * BS degree in Computer Engineering, Koreatech University
 * 2018 - 2020. Researcher, Hansol Secure
 * 2020 - present. Researcher, ABOV Semiconductor  
