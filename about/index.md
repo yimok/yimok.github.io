@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hyo Kyun
+title: Hyo Kyun Im
 tags: "My personal history"
 modified: 2016-11-04
 comments: true
@@ -9,25 +9,21 @@ image:
 
 ---
 
-### 두뇌의 용량은 의지의 용량 ###
-
-
 # Introduce 
-* 임 효 균 (任 孝 均)
-* 1991년 4월 11월 서울 출생 
-* 한국기술교육대학교 컴퓨터 공학부 4학년 재학중
-* 집은 안양이며 꿈을 이루기 위해 병천에서 기숙사 생활중..
-* OS와 IoT에 관심을 가지고 공부중임
-
+* Hyo Kyun Im(임효균)
+* BS degree in Computer Engineering, Koreatech University
+* 2018 - 2020. Researcher, Hansol Secure
+* 2020 - present. Researcher, ABOV Semiconductor  
 
 # TECHNICAL SKILLS
 
 * Programming Languages: C/C++, Java, Python, javascript, Node.js
-* Framework :  Spring
+* Framework : Spring
 * System: Linux , Window 7/10 , 
 * Computer knowledge : Operating System , Computer Architecture , Data Structure , Algorithm , Computer Network , Database ,  Basic Electronics, Digital Engineering , Micro Processor, Develpoment of IoT, Web Service Computing , System Programming
-* Math and Science: Discrete Mathematics, Calculus, Physics, Probability and statistics , 
-Linear Algebra  
+* Seucrity knowledge: Crypto algorithm(ECC, RSA, AES, DES, ECDH, ECDSA, HASH)
+* Tool : ARM keil, Source insight, Eclipse, Visual Studio
+
 
 # Project and Study
 
@@ -38,3 +34,9 @@ Linear Algebra
 * 서울시,다음 Open API를 활용하여 REST 방식을 지향하는 웹 서비스 프로젝트 개발(2016)
 * Cortex-M4 를 사용하여 원격 컨트롤러와 다중 센서로 Line-Tracer 를 제어(2016)
 * oneM2M을 지향하는 Mobius 플랫폼을 적용하여 작은 IoT 시스템 구축(2016)
+* LoRa 통신을 적용한 oneM2M 기반 스마트팜 시스템 (2017)
+* USIM 플랫폼 개발 (2018-2020)
+  - SC300 ST33J2M0 사용
+  - Secure Element 개발
+  - Global Platform 2.3.1 
+  - Java Card 3.0.5
